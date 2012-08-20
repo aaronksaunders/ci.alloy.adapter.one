@@ -5,5 +5,7 @@ This is based on some previous work I have done with ACS and Backbone integratio
 
 Pretty certain there is room for refactoring; but just wanted to get started with the conversation and the effort
 
+WARNING: This code is poorly documented, I will update the readme with additional documentation and explainations of 
+what I have done here.
 
 Check out Alloy here - https://github.com/appcelerator/alloy
