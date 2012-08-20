@@ -1,0 +1,9 @@
+This is a sample application for Appcelerator Alloy.
+
+I went pretty FAR out on the edge and and implemented an Appcelerator Cloud Services (ACS) Adapter for Alloy.
+This is based on some previous work I have done with ACS and Backbone integration.
+
+Pretty certain there is room for refactoring; but just wanted to get started with the conversation and the effort
+
+
+Check out Alloy here - https://github.com/appcelerator/alloy

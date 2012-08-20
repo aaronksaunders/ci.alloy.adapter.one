@@ -1,0 +1,8 @@
+{
+	"defaults": {
+	},
+	"adapter": {
+	"type": "acs",
+	"name": "places"
+	}
+}
