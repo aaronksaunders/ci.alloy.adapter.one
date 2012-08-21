@@ -1,6 +1,8 @@
 {
-	".container": {
-		"backgroundColor":"white"
+	"#mainWindow": {
+	backgroundColor: "#fff",
+	title: "Window Title",
+	tabBarHidden: true
 	},
 	"Label": {
 		"width": Ti.UI.SIZE,

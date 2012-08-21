@@ -1,7 +1,19 @@
 function Controller() {
+    function doAddPlaceClick() {
+        var placeController = Alloy.getController("place");
+        placeController.create($.tab1);
+    }
     require("alloy/controllers/BaseController").call(this);
     var $ = this, exports = {};
-    $.__views.index = A$(Ti.UI.createWindow({}), "Window", null), $.addTopLevelView($.__views.index), $.__views.table = A$(Ti.UI.createTableView({}), "TableView", $.__views.index), $.__views.index.add($.__views.table), _.extend($, $.__views), $.table.updateContent = function(collection) {
+    $.__views.index = A$(Ti.UI.createTabGroup({}), "TabGroup", null), $.__views.mainWindow = A$(Ti.UI.createWindow({
+        backgroundColor: "#fff",
+        title: "Window Title",
+        tabBarHidden: !0
+    }), "Window", null), $.__views.table = A$(Ti.UI.createTableView({}), "TableView", $.__views.mainWindow), $.__views.mainWindow.add($.__views.table), $.__views.tab1 = A$(Ti.UI.createTab({
+        window: $.__views.mainWindow
+    }), "Tab", null), $.__views.index.addTab($.__views.tab1), $.addTopLevelView($.__views.index), $.__views.addButton = A$(Ti.UI.createButton({
+        title: "Add"
+    }), "Button", null), $.addTopLevelView($.__views.addButton), $.__views.addButton.on("click", doAddPlaceClick), _.extend($, $.__views), $.table.updateContent = function(collection) {
         var rows = [];
         for (var i = 0; i < collection.length; i++) {
             var model = collection.at(i).attributes, title = "";
@@ -11,11 +23,7 @@ function Controller() {
             }));
         }
         this.setData(rows);
-    };
-    var places = Alloy.getCollection("Place");
-    places.bind("fetch", function() {
-        $.table.updateContent(places);
-    }), places.dao = Alloy.getModel("Place").dao, places.fetch(), $.index.open(), _.extend($, exports);
+    }, $.mainWindow.setRightNavButton($.addButton), $.index.open(), _.extend($, exports);
 }
 
 var Alloy = require("alloy"), Backbone = Alloy.Backbone, _ = Alloy._, A$ = Alloy.A;

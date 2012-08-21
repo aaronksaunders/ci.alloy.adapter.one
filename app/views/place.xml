@@ -1,0 +1,18 @@
+<Alloy>
+	<Window id="addWindow" class="container" >
+		<View  class="tfgroup">
+			<Label>Name</Label>
+			<TextField  id="name">Name</TextField>
+		</View>
+		<View class="tfgroup">
+			<Label>City</Label>
+			<TextField  id="city" >Name</TextField>
+		</View>
+		<View  class="tfgroup">
+			<Label>State</Label>
+			<TextField  id="state">Name</TextField>
+		</View>
+	</Window>
+	<Button id="place_cancel" >Cancel</Button>
+	<Button id="place_save" >Save</Button>
+</Alloy>

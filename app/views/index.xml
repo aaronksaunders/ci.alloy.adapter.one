@@ -1,5 +1,10 @@
 <Alloy>
-	<Window class="container">
-		<TableView id="table"/>
-	</Window>
+	<TabGroup >
+		<Tab id="tab1">
+			<Window id="mainWindow" class="container" >
+				<TableView id="table"/>
+			</Window>
+		</Tab>
+	</TabGroup>
+	<Button id="addButton" onClick="doAddPlaceClick">Add</Button>
 </Alloy>

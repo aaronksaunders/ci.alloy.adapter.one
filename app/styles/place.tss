@@ -1,0 +1,27 @@
+{
+	"#addWindow": {
+		backgroundColor: "white",
+		title: "Create New Place",
+		tabBarHidden: true,
+		layout : "vertical"
+	},
+	".tfgroup" :  {
+		width: Ti.UI.FILL,
+		height: Ti.UI.SIZE,
+		"top": 10,
+		"left": 10,
+		"layout" : "horizontal"
+	},
+	"Label" : {
+		"borderColor" : "black",
+		"width" : 80,
+		"height" : Ti.UI.SIZE
+	},
+	"TextField" : {
+		"left" : 5,
+		"borderColor" : "black",
+		"width" : 200,
+		"height" : Ti.UI.SIZE
+	}
+	
+}

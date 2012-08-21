@@ -14,7 +14,7 @@ $.table.updateContent = function(collection) {
 	}
 	this.setData(rows);
 };
-
+if (false) {
 // Now let's create a Backbone collection that will hold our models,
 // the classes that represent our model have been generated automatically
 // as Alloy components. Use new on the component to create the model or
@@ -36,7 +36,7 @@ places.dao = Alloy.getModel('Place').dao;
 // Fetch will load models from persistent starage, sync'ing Backbone and persistent store.
 places.fetch();
 
-if (false) {
+
 	// Now we can add items to the model.
 	var place = Alloy.getModel('Place', {
 		"city" : "Washington",
@@ -61,14 +61,14 @@ if (false) {
 	});
 }
 /*
-// UPDATE - update the model save here triggers the CRUD update opperation
-place.save({
-author : "R Kipling"
-});
-// Okay time to show the results. Remember this sync's local Backbone server with persitent store.
-places.fetch();
+ // UPDATE - update the model save here triggers the CRUD update opperation
+ place.save({
+ author : "R Kipling"
+ });
+ // Okay time to show the results. Remember this sync's local Backbone server with persitent store.
+ places.fetch();
 
-* */
+ * */
 
 /*
  // DELETE - destroy triggers the CRUD delete opperation
@@ -77,4 +77,16 @@ places.fetch();
  model.destroy();
  };
  */
+$.mainWindow.setRightNavButton($.addButton);
 $.index.open();
+
+/**
+ * handle click event for creating new object
+ */
+function doAddPlaceClick() {
+	// load the table controller and call the index method
+	var placeController = Alloy.getController('place');
+
+	// pass in the tab since we are faking a navigation controller
+	placeController.create($.tab1);
+}
